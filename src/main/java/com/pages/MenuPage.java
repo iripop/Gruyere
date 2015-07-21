@@ -18,14 +18,14 @@ public class MenuPage extends PageObject {
 	@FindBy(css = "span[id='menu-left'] a:nth-child(4)")
 	private WebElementFacade uploadMenu;
 
-	public void go_to_my_snippets_menu() {
+	public void clickMySnippetsMenu() {
 		mySnippetsMenu.click();
 	}
 
-	public void go_to_home_menu() {
+	public void clickHomeMenu() {
 		homeMenu.click();
 	}
-	public void go_to_upload_menu(){
+	public void clickUploadMenu(){
 		uploadMenu.click();
 	}
 

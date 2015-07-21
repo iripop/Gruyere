@@ -33,19 +33,19 @@ public class SignUpPage extends PageObject {
     @FindBy(css="h2 a")
     private WebElementFacade agreeStartButton;
 
-    public void enter_user_name(String userName) {
+    public void enterUserName(String userName) {
         userNameTextArea.type(userName);
     }
-    public void enter_password(String password){
+    public void enterPassword(String password){
     	passwordTextArea.type(password);
     }
-    public void click_sing_in_button() {
+    public void clickSingInButton() {
         signUpButton.click();
     }
-    public void click_login_button(){
+    public void clickLogInButton(){
     	loginButton.click();
     }
-    public void click_agree_and_start_button(){
+    public void clickAgreeAndStartButton(){
     	agreeStartButton.click();
     }
    

@@ -11,15 +11,15 @@ public class MySnippetsPage extends PageObject {
 	@FindBy(css = "div[class='content'] table tr:nth-child(2) td:nth-child(2) a")
 	private WebElementFacade deleteSnippetButton;
 
-	public void click_refresh_button() {
+	public void clickRefreshButton() {
 		refreshButton.click();
 	}
 
-	public void click_delete_button() {
+	public void clickDeleteButton() {
 		deleteSnippetButton.click();
 	}
 
-	public boolean check_is_delete_button_is_present() {
+	public boolean checkIfDeleteButtonIsPresent() {
 		return deleteSnippetButton.isPresent();
 	}
 }

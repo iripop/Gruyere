@@ -11,33 +11,33 @@ public class LogInSteps extends ScenarioSteps {
     LogInPage logInPage;
 
     @Step
-    public void enter_user_name(String userName){
-    	logInPage.enter_user_name(userName);
+    public void typeUserName(String userName){
+    	logInPage.enterUserName(userName);
     }
     @Step
-    public void enter_password(String password){
-    	logInPage.enter_password(password);
+    public void typePassword(String password){
+    	logInPage.enterPassword(password);
     }
     @Step
-    public void click_sign_in(){
-    	logInPage.click_sing_in_button();
+    public void clickSignIn(){
+    	logInPage.clickSingInButton();
     }
     @Step
-    public void click_login(){
-    	logInPage.click_login_button();
+    public void clickLogIn(){
+    	logInPage.clickLogInButton();
     }
   
     @StepGroup
     public void login(String userName,String password){
-    	open_home_page();
+    	openHomePage();
 
-    	click_sign_in();
-    	enter_user_name(userName);
-    	enter_password(password);
-    	click_login();
+    	clickSignIn();
+    	typeUserName(userName);
+    	typePassword(password);
+    	clickLogIn();
     }
     @Step
-	public void open_home_page() {
+	public void openHomePage() {
 		getDriver().manage().window().maximize();
 		logInPage.open();
 

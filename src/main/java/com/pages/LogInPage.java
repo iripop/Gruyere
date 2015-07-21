@@ -20,16 +20,16 @@ public class LogInPage extends PageObject {
     
   
 
-    public void enter_user_name(String userName) {
+    public void enterUserName(String userName) {
         userNameTextArea.type(userName);
     }
-    public void enter_password(String password){
+    public void enterPassword(String password){
     	passwordTextArea.type(password);
     }
-    public void click_sing_in_button() {
+    public void clickSingInButton() {
         signInButton.click();
     }
-    public void click_login_button(){
+    public void clickLogInButton(){
     	loginButton.click();
     }
   

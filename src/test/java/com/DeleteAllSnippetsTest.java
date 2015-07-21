@@ -36,7 +36,7 @@ public class DeleteAllSnippetsTest {
 	public CreateNewSnippetSteps newSnippetSteps;
 
 	@Steps
-	public LogInSteps loginSteps;
+	public LogInSteps logInSteps;
 
 	@Steps
 	public SignUpSteps signUpSteps;
@@ -45,11 +45,11 @@ public class DeleteAllSnippetsTest {
 	public MySnippetsSteps mySnippetsSteps;
 
 	@Test
-	public void delete_ten_snippets() throws IOException {
+	public void deleteTenSnippets() throws IOException {
 
 		// signUpSteps.signUp("bianca", "test");
 
-		loginSteps.login("bianca", "test");
+		logInSteps.login("bianca", "test");
 
 		newSnippetSteps.getNewSnippet("bianca", "test", "hey");
 		newSnippetSteps.getNewSnippet("bianca", "test", "i+want+to+say%0D%0A");
@@ -62,11 +62,11 @@ public class DeleteAllSnippetsTest {
 		newSnippetSteps.getNewSnippet("bianca", "test", "Hello");
 		newSnippetSteps.getNewSnippet("bianca", "test", "Hello");
 
-		mySnippetsSteps.go_to_mySnippets_menu();
+		mySnippetsSteps.goToMySnippetsMenu();
 		webdriver.navigate().refresh();
-		mySnippetsSteps.refresh_page();
-		mySnippetsSteps.delete_all_snippets();
-		mySnippetsSteps.assert_all_snippets_are_deleted();
+		mySnippetsSteps.refreshPage();
+		mySnippetsSteps.deleteAllSnippets();
+		mySnippetsSteps.assertAllSnippetsAreDeleted();
 	}
 
 }

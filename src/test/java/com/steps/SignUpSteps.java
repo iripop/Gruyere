@@ -11,36 +11,36 @@ public class SignUpSteps extends ScenarioSteps {
     SignUpPage signUpPage;
 
     @Step
-    public void enter_user_name(String userName){
-    	signUpPage.enter_user_name(userName);
+    public void typeUserName(String userName){
+    	signUpPage.enterUserName(userName);
     }
     @Step
-    public void enter_password(String password){
-    	signUpPage.enter_password(password);
+    public void typePassword(String password){
+    	signUpPage.enterPassword(password);
     }
     @Step
-    public void click_sign_in(){
-    	signUpPage.click_sing_in_button();
+    public void clickSignIn(){
+    	signUpPage.clickSingInButton();
     }
     @Step
-    public void click_login(){
-    	signUpPage.click_login_button();
+    public void clickLogIn(){
+    	signUpPage.clickLogInButton();
     }
     @Step
-    public void click_agree_and_start(){
-    	signUpPage.click_agree_and_start_button();
+    public void clickAgreeAndStart(){
+    	signUpPage.clickAgreeAndStartButton();
     }
     @StepGroup
     public void signUp(String userName,String password){
-    	open_home_page();
-    	click_agree_and_start();
-    	click_sign_in();
-    	enter_user_name(userName);
-    	enter_password(password);
-    	click_login();
+    	openHomePage();
+    	clickAgreeAndStart();
+    	clickSignIn();
+    	typeUserName(userName);
+    	typePassword(password);
+    	clickLogIn();
     }
     @Step
-	public void open_home_page() {
+	public void openHomePage() {
 		getDriver().manage().window().maximize();
 		signUpPage.open();
 
